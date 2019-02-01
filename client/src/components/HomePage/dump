@@ -1,0 +1,43 @@
+
+// import MainSearch from './MainSearch';
+// import MainContent from './MainContent';
+// import Footer from './Footer';
+
+
+font-family: 'Bowlby One SC', cursive;
+font-family: 'Merriweather', serif;
+font-family: 'Rasa', serif;
+Newb? No Problem.
+We help people new to their industries. HighSchool Grads, Recent
+          College Grads, BootCamp Grads, you name it!
+
+
+
+
+
+
+
+ {/* These are sample job postings. They will be removed when form is finished and render synamicaly */}
+
+        <div className="jobPosting"> 
+        <img src={ require('../../images/sample.png') }   />
+        <h4 className="jobTitleText">Test Job Post</h4> 
+        <p className="jobLocationText"><i class="material-icons"> room </i> Location </p>
+        <p className="jobBadge"> BADGE </p>
+        <p className="jobDescriptionText"> <em className="jobCompanyText">Company Name</em>, Bacon ipsum dolor amet jerky pig andouille tail fatback shank. </p>
+        <p className="jobpostDate"> 3 days ago </p>
+        
+        </div>
+
+
+
+        <div className="jobPosting"> 
+        <img src={ require('../../images/sample.png') }   />
+        <h4 className="jobTitleText">Test Job Post</h4> 
+        <p className="jobLocationText"><i class="material-icons"> room </i> Location </p>
+        <p className="jobBadge"> BADGE </p>
+        <p className="jobDescriptionText"> <em className="jobCompanyText">Company Name</em>, Bacon ipsum dolor amet jerky pig andouille tail fatback shank. </p>
+        <p className="jobpostDate"> 3 days ago </p>
+        
+        </div>
+         

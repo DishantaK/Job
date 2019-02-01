@@ -1,0 +1,300 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+/*  Header and text  */
+#logo {
+  font-family: "Bowlby One SC", cursive;
+  font-size: 2rem;
+  margin: 12px;
+  color: #fc3c3c;
+}
+
+#logo b {
+  
+}
+h1 b {
+  color: #fc3c3c;
+  font-weight: bold;
+ 
+  font-family: "Bowlby One SC", cursive;
+}
+
+.headers {
+  font-family: "Raleway", sans-serif;
+}
+
+.mainH {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  margin-left: 40px;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2.25rem;
+}
+h4 {
+  font-size: 1.75rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+.special {
+  font-family: "Raleway Dots", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* buttons */
+
+button {
+  padding: 5px;
+  border: none;
+  /* width: 150px; */
+  /* height: 40px; */
+  font-size: 1rem;
+  margin: 5px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.primaryButton {
+  background-color: #f8b500;
+  color: #fff4e0;
+}
+.primaryButton:hover {
+  background-color: rgb(221, 162, 0);
+}
+.secondaryButton {
+  background-color: #fc3c3c;
+  color: #fff4e0;
+}
+.secondaryButton:hover {
+  background-color: rgb(223, 48, 48);
+}
+.specialButton {
+  background-color: #fff;
+  
+}
+.specialButton:hover {
+  background-color: rgb(192, 183, 166);
+}
+.disabledButton {
+  background-color: #393e46;
+  color: #999;
+}
+.disabledButton:hover {
+  background-color: rgb(52, 57, 65);
+}
+
+/* Spacing & Display*/
+body,
+#mainContainer {
+  margin: 0px;
+  padding: 0px;
+}
+
+#mainContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: auto;
+  padding: 15px;
+  position: relative;
+}
+
+#searchArea {
+  width: 55%;
+  margin-top: -20px;
+  position: relative;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  margin-left: 40px;
+  text-shadow: 1px;
+
+}
+
+#top {
+ 
+  background: url("rochelle.jpg");
+  background-position-y: 45%;
+  background-position-x: 90%;
+  background-size: cover;
+ 
+  background-blend-mode: darken;
+
+  color: #fff;
+
+}
+
+#intro {
+  height: 350px;
+  padding-top: 40px;
+  /* text-align: center; */
+  margin: auto;
+}
+.headItem {
+  /* display: flex; */
+  display: flex;
+  /* width:100%; */
+}
+
+#searchM {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+}
+
+#viewJobs {
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+}
+#jobArea {
+  /* margin-top:30px; */
+  height: 80vh;
+  padding-top: 80px;
+}
+
+/* individual job posing styles */
+
+.jobPosting {
+  width: 80%;
+  display: grid;
+  /* grid-gap:-25px; */
+  grid-template-columns: 20% 1fr 20% 15%;
+  grid-template-rows: repeat(2, 1fr);
+  margin: auto;
+  height: 120px;
+  grid-gap: 10px;
+  align-items: start;
+  overflow: hidden;
+}
+.jobPosting:hover {
+  cursor: pointer;
+  background-color: rgb(240, 240, 240);
+}
+.jobPosting img {
+  width: 70px;
+  height: 70px;
+  grid-column: span 1;
+  grid-row: span 2;
+  align-self: top;
+  margin-top: 10px;
+  justify-self: center;
+}
+.jobTitleText {
+  grid-column: span 1;
+  grid-row: span 1;
+  font-weight: bold;
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+.jobLocationText {
+  grid-column: span 1;
+  grid-row: span 2;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.jobCompanyText {
+  grid-row: span 1;
+  grid-column: span 1;
+  align-self: top;
+  margin-top: -10px;
+}
+.jobBadge {
+  grid-column: span 1;
+  grid-row: span 1;
+  font-weight: bold;
+  color: #4eba6f;
+  align-self: start;
+}
+/* conditional render badge color based on industry */
+.jobDescriptionText {
+  grid-column: span 1;
+  grid-row: span 1;
+  align-self: start;
+  margin-top: -20px;
+  overflow: hidden;
+}
+.jobpostDate {
+  align-self: top;
+  grid-column: span 1;
+  grid-row: span 1;
+  margin-top: -10px;
+}
+
+/* Form */
+
+.jobEntry {
+  /* background-color: #FFF4E0 ; */
+  margin: 0px;
+}
+
+/* Individual Job Page */
+
+.jobTitleTop, .jobSubTitleTop {
+    Margin: auto;
+    text-align: center;
+}
+.jobSubTitleTop {
+    color: #667;
+}
+.otherLogo {
+    letter-spacing: -1px;
+    font-family: "Bowlby One SC", cursive;
+    margin: 15px;
+    font-size: 2.3rem;
+}
+
+.jobPageContent {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    grid-gap: 15px;
+    width: 90%;
+    margin: auto;
+}
+
+.jobContainerMain {
+   
+}
+
+.jobUrlRoute {
+    margin: 30px;
+    justify-self: center;
+   
+}
+@media only screen and (min-width: 400px) {
+  #mainContent {
+    grid-template-columns: 1fr;
+  }
+
+  #mainContent main {
+    border-right: 1px solid #999;
+    padding: 5px;
+  }
+
+  #mainContent aside {
+    padding: 5px;
+  }
+
+  #filter {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
