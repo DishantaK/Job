@@ -34,6 +34,14 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 require('./routes/api-routes')(app);
 
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, './client/public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://dd2:Dee1234@ds225078.mlab.com:25078/heroku_xqk2sz7s" ,{useNewUrlParser: true } );
 // || "mongodb://localhost/jobr" local
