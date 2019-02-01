@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === "production") {
 require('./routes/api-routes')(app);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://dd2:Dee1234@ds219055.mlab.com:19055/heroku_rrqb8frn" ,{useNewUrlParser: true } );
+mongoose.connect(process.env.MONGODB_URI || "mongodb://dd2:Dee1234@ds225078.mlab.com:25078/heroku_xqk2sz7s" ,{useNewUrlParser: true } );
 // || "mongodb://localhost/jobr" local
 
 // Start the API server
