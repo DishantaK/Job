@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === "production") {
 app.get('*', (request, response) => {
 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 }); 
-// test ^^
+// / test ^
 
 // Add routes, both API and view
 require('./routes/api-routes')(app);
