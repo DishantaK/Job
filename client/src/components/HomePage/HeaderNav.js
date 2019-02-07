@@ -36,7 +36,7 @@ const styles = {
             <section className={classes.buttonGroup}>
             {/* post job checks login status if login, show post job page, if not show login */}
             <Button href="/newjob"  style={{ background: '#FC3C3C', marginRight: '5px', color: '#fff'}}> <Link to="/newjob" style={{color: '#fff'}}>+ POST JOB </Link> </Button>
-            <Button href="https://github.com/DishantaK/jobr"  style={{ color: '#fff'}} > GITHUB </Button>
+            <Button href="https://github.com/DishantaK/Job"  style={{ color: '#fff'}} > GITHUB </Button>
             </section>
           </Toolbar>
           
