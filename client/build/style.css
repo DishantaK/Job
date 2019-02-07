@@ -1,6 +1,11 @@
+html{
+  margin: 0px;
+  padding: 0px;
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+
 }
 
 /*  Header and text  */
@@ -280,6 +285,21 @@ body,
     justify-self: center;
    
 }
+
+
+/* Footer */
+footer {
+  background-color: #fc3c3c;
+  /* text-align: center; */
+  padding:10px;
+  color: #fff;
+  height: 30px;
+}
+footer p{
+  margin: auto;
+  
+}
+
 @media only screen and (min-width: 400px) {
   #mainContent {
     grid-template-columns: 1fr;

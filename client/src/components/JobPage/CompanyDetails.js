@@ -29,7 +29,7 @@ class CompanyDetails extends React.Component {
       <Consumer>
         {context => (
           <div style={{ width: "70vw", margin: "auto" }}>
-            <h1 className="headerText">Tell us about your company.</h1>
+            <h1 className="headerText">Tell us about your company<b>.</b></h1>
 
             <form onSubmit={context.submitJob}>
               <TextField
@@ -57,21 +57,47 @@ class CompanyDetails extends React.Component {
                 onChange={context.onChange}
                 margin="normal"
                 variant="filled"
-                label="Please add your company's url for the Job posting"
+                label="Please add your company's url for the Job posting - Without HTTP/s prefixes"
                 fullWidth
               />
               <br />
               <h6>
                 Company Avatar : 
               </h6>
-               <AvatarUpload />
+               {/* <AvatarUpload /> */}
+               <TextField
+                name="avatar"
+                value={context.avatar}
+                onChange={context.onChange}
+                margin="normal"
+                variant="filled"
+                label="Please add a url to your company's Avatar - Without HTTP/s prefixes"
+                fullWidth
+              />
+              <br />
+            
+               {/* <AvatarUpload /> */}
+               <h6>
+                Company Location : 
+              </h6>
+
+               <TextField
+                name="location"
+                value={context.location}
+                onChange={context.onChange}
+                margin="normal"
+                variant="filled"
+                label="Please add the location for the job or company - City, ST"
+                fullWidth
+              />
+              <br />
               
               <br /> <br />
             </form>
          
             <Button onClick={context.previousStep}  style={{ background: '#FC3C3C', marginRight: '5px', color:'#FFF'}}> Previous </Button>
             <Button onClick={context.nextStep}  style={{ background: '#393E46', marginRight: '5px', color:'#FFF'}}> Next </Button>
-          
+             <br />
           </div>
         )}
       </Consumer>

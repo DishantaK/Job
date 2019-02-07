@@ -18,6 +18,8 @@ const JobContext = React.createContext({
       companydescription:'',
       selectedJob: '',
       joburl: '',
+      avatar:'',
+      redirect: false
   },
 
   

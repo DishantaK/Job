@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('mongoose-type-url');
 
 // Save a reference to the Schema constructor
 const Schema = mongoose.Schema;
@@ -42,11 +43,17 @@ const jobSchema = new Schema({
     // required: "You must include some content in your note"
   },
  
-  jobUrl: {}
+  joburl: {
+    type: String,
+  },
+  avatar: {
+    type: String,
+  },
+  created_at: {type: Date, default: Date.now}
   
 });
 
-// Remember to edit type, and add company info, possibly a company schema
+
 var Job = mongoose.model('Job', jobSchema);
 
 // Export the Tweet model

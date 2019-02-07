@@ -20,7 +20,7 @@ class JobDetails extends React.Component {
           <div style={{ width: '70vw', margin:'auto'}}>
             <h1 className="headerText">
               {" "}
-              Post A Job.{" "}
+              Post A Job<b>.</b>{" "}
             </h1>
 
             {/* Remember to add styles - mainly checked state for radio button - they're being checked but do not show */}
@@ -30,6 +30,7 @@ class JobDetails extends React.Component {
 
               <TextField
                 name="title"
+                label="Required"
                 value={context.title}
                 onChange={context.onChange}
                 margin="normal"

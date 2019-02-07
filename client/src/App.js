@@ -39,6 +39,9 @@ class App extends Component {
       companydescription:'',
       selectedJob: '',
       joburl:'',
+      redirect: false,
+    
+
     step: 1
    
   }
@@ -100,6 +103,24 @@ class App extends Component {
     })
   }
 
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+
+
+  renderRedirect = () => {
+  
+    if (this.state.redirect === true) {
+      return <Redirect to='/' />
+    }
+
+  }
+
+  
+
+
 
   
   submitJob = (event) => {
@@ -115,10 +136,13 @@ class App extends Component {
       skills:this.state.skills,
       companydescription:this.state.companydescription,
       company:this.state.company,
-      joburl:this.state.joburl
+      joburl:this.state.joburl,
+      avatar:this.state.avatar,
+      location:this.state.location
     }, )
     .then((result) => {
       console.log(result.data);
+      
       // result.send({redirect: '/'});
     })
   }
@@ -148,7 +172,6 @@ class App extends Component {
        
 
 
-
   render() {
     
     return (
@@ -156,16 +179,16 @@ class App extends Component {
     <MuiThemeProvider>
       <Provider value={{state: this.state, switchStep:this.switchStep, 
       previousStep:this.previousStep, nextStep:this.nextStep, submitJob:this.submitJob,
-      grabAvatar:this.grabAvatar, onChange:this.onChange, jobList:this.jobList, updateJob:this.updateJob, selectedJob:this.selectedJob  }}
+      grabAvatar:this.grabAvatar, onChange:this.onChange, jobList:this.jobList, updateJob:this.updateJob, selectedJob:this.selectedJob, setRedirect:this.setRedirect, renderRedirect:this.renderRedirect  }}
       
-      inputs={{title:this.title, description:this.description, salary:this.salary, type:this.type, industry:this.industry, location:this.location, skills:this.skills, company:this.company, avatar:this.avatar, companydescription:this.state.companydescription,  selectedJob:this.state.selectedJob, joburl:this.state.joburl}}
+      inputs={{title:this.title, description:this.description, salary:this.salary, type:this.type, industry:this.industry, location:this.location, skills:this.skills, company:this.company, avatar:this.avatar, companydescription:this.state.companydescription,  selectedJob:this.state.selectedJob, joburl:this.state.joburl, redirect:this.state.redirect}}
       >
     <BrowserRouter>
      <div id="mainContainer">
       {/* <HeaderNav /> */}
       
       <Route exact path='/' component={HomePage} />
-      <Route exact path='/newjob' component={JobPage} />
+      <Route exact path='/newjob' component={JobPage}  />
       <Route exact path='/Job' component={Job} />
       </div>
     </BrowserRouter>

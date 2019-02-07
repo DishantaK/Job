@@ -19,7 +19,7 @@ class Job extends React.Component {
             </h1>
 
             <section className="jobHeaderIntro">
-              <div>{context.state.selectedJob.avatar}</div>
+              {/* <div>{context.state.selectedJob.avatar}</div> */}
               <h1 className="jobTitleTop">
                 {" "}
                 {context.state.selectedJob.title}
@@ -37,9 +37,9 @@ class Job extends React.Component {
                 {context.state.selectedJob.skills
                 }
                 </div>
-
+                 
+                 <a target="_blank" href={"https://"+context.state.selectedJob.joburl}>
                  <Button
-                href={context.state.selectedJob.joburl}
                 style={{
                 background: "#FC3C3C",
                 marginTop: "40px",
@@ -49,6 +49,7 @@ class Job extends React.Component {
             >
              Apply on {context.state.selectedJob.company}'s Website
           </Button>
+          </a>
               </section>
 
               <aside>
