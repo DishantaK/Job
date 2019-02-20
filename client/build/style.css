@@ -119,7 +119,13 @@ body,
   height: auto;
   padding: 15px;
   position: relative;
+  overflow: auto;
 }
+#mainContent::-webkit-scrollbar { 
+  display: none; 
+}  
+
+
 
 #searchArea {
   width: 55%;
@@ -291,6 +297,7 @@ body,
 footer {
   background-color: #fc3c3c;
   /* text-align: center; */
+  margin-top:30px;
   padding:10px;
   color: #fff;
   height: 30px;

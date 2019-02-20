@@ -4,6 +4,7 @@ import JobArea from './JobArea';
 // import LocationFilter from './filter/LocationFilter';
 // import SalaryFilter from './filter/SalaryFilter';
 // import TypeFilter from './filter/TypeFilter';
+
 import {Consumer} from '../../JobContext';
 
 const MainContent = (props) => (
@@ -13,13 +14,15 @@ const MainContent = (props) => (
    
       <div id="filter"> 
           {/* <CategoryFilter /> */}
-          <h4 id="viewJobs">View Jobs </h4>
+          <h4 id="viewJobs"><a href="/">View Jobs </a></h4>
           
       </div>
       <div id="jobArea">
        
          <JobArea />
       </div>
+
+      
   </div>
       )}
       </Consumer>

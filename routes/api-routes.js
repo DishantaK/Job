@@ -15,6 +15,7 @@ module.exports = function (app) {
 
 
 
+
   app.post('/api/jobs', function (req, res) {
    console.log('hits');
     Job.create(req.body)

@@ -39,6 +39,7 @@ class App extends Component {
       companydescription:'',
       selectedJob: '',
       joburl:'',
+      selectedIndustry:'',
       redirect: false,
     
 
@@ -94,6 +95,7 @@ class App extends Component {
     console.log( e.target.files[0])
   
   }
+
   
   componentDidMount(){
     $.get('/api/jobs')
@@ -142,9 +144,18 @@ class App extends Component {
     }, )
     .then((result) => {
       console.log(result.data);
-      
+      window.location.assign("/");
       // result.send({redirect: '/'});
     })
+  }
+
+  filterIndustry = (id) => {
+  //  Filter through existing jobList and render result - no need to requery the db. All the jobs are already there
+  this.setState({
+   
+    selectedIndustry :   this.state.jobList.find(job => job._id === id).industry
+  });
+  console.log(this.state.selectedIndustry);
   }
 
   nextStep = () => {
@@ -179,9 +190,9 @@ class App extends Component {
     <MuiThemeProvider>
       <Provider value={{state: this.state, switchStep:this.switchStep, 
       previousStep:this.previousStep, nextStep:this.nextStep, submitJob:this.submitJob,
-      grabAvatar:this.grabAvatar, onChange:this.onChange, jobList:this.jobList, updateJob:this.updateJob, selectedJob:this.selectedJob, setRedirect:this.setRedirect, renderRedirect:this.renderRedirect  }}
+      grabAvatar:this.grabAvatar, onChange:this.onChange, jobList:this.jobList, updateJob:this.updateJob, selectedJob:this.selectedJob, setRedirect:this.setRedirect, filterIndustry:this.filterIndustry  }}
       
-      inputs={{title:this.title, description:this.description, salary:this.salary, type:this.type, industry:this.industry, location:this.location, skills:this.skills, company:this.company, avatar:this.avatar, companydescription:this.state.companydescription,  selectedJob:this.state.selectedJob, joburl:this.state.joburl, redirect:this.state.redirect}}
+      inputs={{title:this.title, description:this.description, salary:this.salary, type:this.type, industry:this.industry, location:this.location, skills:this.skills, company:this.company, avatar:this.avatar, companydescription:this.state.companydescription,  selectedJob:this.state.selectedJob, joburl:this.state.joburl, redirect:this.state.redirect, selectedIndustry:this.state.selectedIndustry}}
       >
     <BrowserRouter>
      <div id="mainContainer">
