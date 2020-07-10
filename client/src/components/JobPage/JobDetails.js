@@ -30,7 +30,7 @@ class JobDetails extends React.Component {
 
               <TextField
                 name="title"
-                label="Required"
+                required="true"
                 value={context.title}
                 onChange={context.onChange}
                 margin="normal"

@@ -33,6 +33,7 @@ class CompanyDetails extends React.Component {
 
             <form onSubmit={context.submitJob}>
               <TextField
+                required="true"
                 name="company"
                 value={context.company}
                 onChange={context.onChange}
@@ -42,6 +43,7 @@ class CompanyDetails extends React.Component {
               />
               <br />
               <TextField
+                required="true"
                 name="companydescription"
                 value={context.companydescription}
                 onChange={context.onChange}
@@ -52,6 +54,7 @@ class CompanyDetails extends React.Component {
               />
               <br />
               <TextField
+                required="true"
                 name="joburl"
                 value={context.joburl}
                 onChange={context.onChange}
@@ -66,6 +69,7 @@ class CompanyDetails extends React.Component {
               </h6>
                {/* <AvatarUpload /> */}
                <TextField
+                required="true"
                 name="avatar"
                 value={context.avatar}
                 onChange={context.onChange}
@@ -82,6 +86,7 @@ class CompanyDetails extends React.Component {
               </h6>
 
                <TextField
+                required="true"
                 name="location"
                 value={context.location}
                 onChange={context.onChange}
