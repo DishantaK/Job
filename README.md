@@ -25,6 +25,9 @@ Filtering tips
 
 ![JOBS](https://user-images.githubusercontent.com/12939053/56655566-2b8c8100-6661-11e9-98a0-3f957e354991.PNG)
 
+////// 2020 Updates //////
+- updated npm package security vulnerabilities resulting from outdated files -
+- copyright 2020 
 
 
 
