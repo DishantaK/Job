@@ -23,9 +23,9 @@ class JobArea extends Component {
           ).map(job => 
            
             <div className="jobPosting"> 
-        
-            <img src={"https://"+job.avatar}  /> 
-            {/* <img src={job.avatar} || require('../../images/sample.png')  />  pulls in avatar url but does not display img */}
+            { (!job.avatar) ?
+                    <img src={"/JOBRDefault.png"}  /> :  <img src={"https://"+job.avatar}  />
+                      }
           
             <Link onClick={() =>context.updateJob(job._id)} to="/Job"> <h5 className="jobTitleText" >{job.title}</h5></Link>
           
