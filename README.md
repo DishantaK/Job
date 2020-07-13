@@ -28,6 +28,7 @@ Filtering tips
 -------------------------------------------------------- 2020 Updates --------------------------------------------------------
 - updated npm package security vulnerabilities resulting from outdated files
 - copyright 2020 
+- Conditional Image. If none is added for the positng, then the default J shows
 
 
 
